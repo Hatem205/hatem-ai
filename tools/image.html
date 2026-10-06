@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="ar" dir="rtl" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مولد الصور | حاتم AI</title>
+<meta name="description" content="مولد الصور من حاتم AI — أنشئ صورًا تسويقية وإبداعية من وصف نصي (نسخة تجريبية).">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c3aed'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>H</text></svg>"></head>
+<body><a class="skip" href="#main">تخطي إلى المحتوى</a>
+<header class="header"><div class="container header-in">
+<a class="brand" href="../index.html"><span class="brand-mark">✦</span> حاتم AI</a>
+<nav class="nav" id="mainNav" aria-label="التنقل الرئيسي">
+<a href="../index.html">الرئيسية</a><a href="../tools.html">الأدوات</a><a href="../services.html">الخدمات</a><a href="../pricing.html">الأسعار</a><a href="../about.html">عن المنصة</a>
+</nav>
+<div class="header-actions">
+<button class="icon-btn" data-theme-btn title="تبديل المظهر">🌙</button>
+<a class="btn btn-ghost btn-sm hide-m" href="../login.html">دخول</a>
+<a class="btn btn-primary btn-sm" href="../tools.html">ابدأ الآن</a>
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+</div></div></header>
+<main id="main"><section class="section"><div class="container">
+<div class="sec-head"><h1>مولد الصور</h1><p>صف الصورة التي تتخيلها واحصل على نتيجة تجريبية للعرض. <span class="badge badge-demo">تجريبي</span></p></div>
+<div class="card">
+<label for="iInput">صف الصورة</label>
+<textarea class="textarea" id="iInput" placeholder="مثال: شعار عصري لمتجر قهوة بألوان دافئة..."></textarea>
+<div class="row" style="grid-template-columns:1fr 1fr">
+<div><label for="iRatio">المقاس</label>
+<select class="select" id="iRatio"><option>مربع 1:1</option><option>أفقي 16:9</option><option>عمودي 9:16</option></select></div>
+<div><label for="iStyle">النمط</label>
+<select class="select" id="iStyle"><option>واقعي</option><option selected>سينمائي</option><option>Minimal</option><option>Illustration</option></select></div>
+</div>
+<div class="toolbar">
+<button class="btn btn-primary" onclick="genImage()">إنشاء الصورة</button>
+<a class="btn btn-ghost" href="../tools.html">كل الأدوات</a>
+</div>
+<div class="result" id="iResult"></div>
+</div>
+</div></section></main>
+<footer><div class="container foot-grid">
+<div><a class="brand" href="../index.html"><span class="brand-mark">✦</span> حاتم AI</a><p style="color:var(--muted)">أدوات ذكاء اصطناعي تساعدك على تحويل الأفكار إلى نتائج.</p></div>
+<div><h4>المنصة</h4><a href="../index.html">الرئيسية</a><a href="../tools.html">الأدوات</a><a href="../services.html">الخدمات</a><a href="../pricing.html">الأسعار</a></div>
+<div><h4>معلومات</h4><a href="../about.html">عن المنصة</a><a href="../contact.html">تواصل معنا</a><a href="../faq.html">الأسئلة الشائعة</a></div>
+<div><h4>قانوني</h4><a href="../privacy.html">سياسة الخصوصية</a><a href="../terms.html">الشروط والأحكام</a><a href="../login.html">تسجيل الدخول</a></div>
+</div><div class="container foot-bottom"><span>© 2026 Hatim AI. جميع الحقوق محفوظة.</span><span>هذا الموقع مشروع تجريبي لأغراض التدريب والعرض فقط.</span></div></footer>
+<div class="modal-back" id="payModal"><div class="modal"><h3 style="margin-top:0">هذه نسخة تجريبية</h3><p style="color:var(--muted)">نظام الدفع غير مفعّل في هذا المشروع.</p><button class="btn btn-primary" onclick="closeModal('payModal')">فهمت</button></div></div>
+<script src="../assets/js/app.js"></script></body></html>

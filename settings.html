@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="ar" dir="rtl" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الإعدادات | حاتم AI</title>
+<meta name="description" content="إعدادات حاتم AI — الحساب والإشعارات واللغة والمظهر (نسخة تجريبية).">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c3aed'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>H</text></svg>"></head>
+<body><a class="skip" href="#main">تخطي إلى المحتوى</a>
+<header class="header"><div class="container header-in">
+<a class="brand" href="index.html"><span class="brand-mark">✦</span> حاتم AI</a>
+<nav class="nav" id="mainNav" aria-label="التنقل الرئيسي">
+<a href="index.html">الرئيسية</a><a href="tools.html">الأدوات</a><a href="services.html">الخدمات</a><a href="pricing.html">الأسعار</a><a href="about.html">عن المنصة</a>
+</nav>
+<div class="header-actions">
+<button class="icon-btn" data-theme-btn title="تبديل المظهر">🌙</button>
+<a class="btn btn-ghost btn-sm hide-m" href="login.html">دخول</a>
+<a class="btn btn-primary btn-sm" href="tools.html">ابدأ الآن</a>
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+</div></div></header>
+<main id="main"><section class="section"><div class="container" style="max-width:760px">
+<div class="sec-head"><h1>الإعدادات</h1><p>تحكم في حسابك وتجربتك. <span class="badge badge-demo">تجريبي</span></p></div>
+<div class="card">
+<h3 style="margin:0">الحساب</h3>
+<p>أنت مسجل كزائر في النسخة التجريبية. يمكنك مسح البيانات المحلية في أي وقت.</p>
+<div class="toolbar"><button class="btn btn-ghost" onclick="localStorage.clear();toast('تم مسح البيانات المحلية')">مسح البيانات المحلية</button><a class="btn btn-ghost" href="login.html">تسجيل الدخول</a></div>
+</div>
+<div class="card" style="margin-top:16px">
+<h3 style="margin:0">الإشعارات</h3>
+<div class="set-row"><div><b>إشعارات الموقع</b><p style="margin:0;color:var(--muted)">تنبيهات حول الأدوات والنتائج</p></div><button class="switch" id="swNotif" role="switch" aria-checked="false" aria-label="إشعارات الموقع"></button></div>
+<div class="set-row" style="border:none"><div><b>إشعارات البريد</b><p style="margin:0;color:var(--muted)">ملخص أسبوعي (محاكاة)</p></div><button class="switch" id="swMail" role="switch" aria-checked="false" aria-label="إشعارات البريد"></button></div>
+</div>
+<div class="card" style="margin-top:16px">
+<h3 style="margin:0">اللغة</h3>
+<label for="langSel">لغة الواجهة</label>
+<select class="select" id="langSel"><option>العربية</option><option>English (قريبًا)</option></select>
+</div>
+<div class="card" style="margin-top:16px">
+<h3 style="margin:0">المظهر</h3>
+<div class="set-row"><div><b>الوضع الداكن</b><p style="margin:0;color:var(--muted)">بدّل بين الفاتح والداكن</p></div><button class="switch" id="swDark" role="switch" aria-checked="false" aria-label="الوضع الداكن"></button></div>
+<div class="toolbar"><button class="btn btn-ghost" onclick="toggleTheme()">تبديل الوضع الداكن</button></div>
+</div>
+</div></section></main>
+<footer><div class="container foot-grid">
+<div><a class="brand" href="index.html"><span class="brand-mark">✦</span> حاتم AI</a><p style="color:var(--muted)">أدوات ذكاء اصطناعي تساعدك على تحويل الأفكار إلى نتائج.</p></div>
+<div><h4>المنصة</h4><a href="index.html">الرئيسية</a><a href="tools.html">الأدوات</a><a href="services.html">الخدمات</a><a href="pricing.html">الأسعار</a></div>
+<div><h4>معلومات</h4><a href="about.html">عن المنصة</a><a href="contact.html">تواصل معنا</a><a href="faq.html">الأسئلة الشائعة</a></div>
+<div><h4>قانوني</h4><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">الشروط والأحكام</a><a href="login.html">تسجيل الدخول</a></div>
+</div><div class="container foot-bottom"><span>© 2026 Hatim AI. جميع الحقوق محفوظة.</span><span>هذا الموقع مشروع تجريبي لأغراض التدريب والعرض فقط.</span></div></footer>
+<div class="modal-back" id="payModal"><div class="modal"><h3 style="margin-top:0">هذه نسخة تجريبية</h3><p style="color:var(--muted)">نظام الدفع غير مفعّل في هذا المشروع.</p><button class="btn btn-primary" onclick="closeModal('payModal')">فهمت</button></div></div>
+<script src="assets/js/app.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>{bindSwitch('swNotif','hatim-notif',true);bindSwitch('swMail','hatim-mail',false);try{var isDark=document.documentElement.getAttribute('data-theme')==='dark';try{localStorage.setItem('hatim-dark',JSON.stringify(isDark));}catch(e){}var el=document.getElementById('swDark');if(el)el.setAttribute('aria-checked',isDark?'true':'false');}catch(e){}bindSwitch('swDark','hatim-dark',document.documentElement.getAttribute('data-theme')==='dark',function(v){var t=v?'dark':'light';document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('hatim-theme',JSON.stringify(t));}catch(e){}if(typeof syncThemeBtn==='function')syncThemeBtn();});});</script>
+</body></html>
