@@ -1,39 +1,45 @@
 <!DOCTYPE html><html lang="ar" dir="rtl" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>مساعد الأفكار | حاتم AI</title>
 <meta name="description" content="مساعد الأفكار من حاتم AI — ولّد أفكار مشاريع ومحتوى وحملات (نسخة تجريبية).">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c3aed'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>H</text></svg>"></head>
 <body><a class="skip" href="#main">تخطي إلى المحتوى</a>
-<header class="header"><div class="container header-in">
-<a class="brand" href="../index.html"><span class="brand-mark">✦</span> حاتم AI</a>
+<header class="header" id="siteHeader"><div class="container header-in">
+<a class="brand" href="../index.html"><span class="brand-mark"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.2L21 10l-6.8 1.8L12 18l-2.2-6.2L3 10l6.8-1.8zM19 15l1.2 3.2L23.5 19l-3.3.8L19 23l-1.2-3.2-3.3-.8 3.3-.8z"/></svg></span> حاتم AI</a>
 <nav class="nav" id="mainNav" aria-label="التنقل الرئيسي">
 <a href="../index.html">الرئيسية</a><a href="../tools.html">الأدوات</a><a href="../services.html">الخدمات</a><a href="../pricing.html">الأسعار</a><a href="../about.html">عن المنصة</a>
 </nav>
 <div class="header-actions">
-<button class="icon-btn" data-theme-btn title="تبديل المظهر">🌙</button>
+<button class="icon-btn" data-theme-btn title="تبديل المظهر" aria-label="تبديل المظهر"></button>
 <a class="btn btn-ghost btn-sm hide-m" href="../login.html">دخول</a>
 <a class="btn btn-primary btn-sm" href="../tools.html">ابدأ الآن</a>
-<button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div></div></header>
 <main id="main"><section class="section"><div class="container">
-<div class="sec-head"><h1>مساعد الأفكار</h1><p>اكتب موضوعًا واحصل على أفكار عملية جاهزة للتنفيذ. <span class="badge badge-demo">تجريبي</span></p></div>
+<div class="sec-head"><span class="sec-tag">مساعد الأفكار</span><h1>ولّد أفكارًا عملية جاهزة للتنفيذ</h1><p>اكتب موضوعًا واحصل على قائمة أفكار مرقمة. <span class="badge badge-demo">تجريبي</span></p></div>
+<div class="tool-wrap">
 <div class="card">
 <label for="dInput">الموضوع</label>
 <input class="input" id="dInput" placeholder="مثال: مشروع متجر إلكتروني للعطور...">
 <label for="dCount">عدد الأفكار</label>
 <select class="select" id="dCount"><option>5</option><option>10</option><option>15</option></select>
 <div class="toolbar">
-<button class="btn btn-primary" onclick="genIdeas()">توليد الأفكار</button>
+<button class="btn btn-primary" onclick="genIdeas()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.7 1 1.5 1 2.5h6c0-1 .2-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg> توليد الأفكار</button>
+<button class="btn btn-ghost" onclick="clearBox('dResult')">مسح</button>
 </div>
-<div class="result" id="dResult"></div>
 </div>
-<p style="margin-top:14px"><a class="btn btn-ghost btn-sm" href="../tools.html">← كل الأدوات</a></p>
+<div class="side-card"><div class="mock-screen"><div class="dash-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dash-url">hatim.ai/result</span></div>
+<div style="padding:18px"><b>الأفكار المقترحة</b>
+<div class="result" id="dResult">اكتب الموضوع أولًا ثم اضغط توليد الأفكار.</div>
+</div></div></div>
+</div>
+<p style="margin-top:14px"><a class="btn btn-ghost btn-sm" href="../tools.html">كل الأدوات</a></p>
 </div></section></main>
 <footer><div class="container foot-grid">
-<div><a class="brand" href="../index.html"><span class="brand-mark">✦</span> حاتم AI</a><p style="color:var(--muted)">أدوات ذكاء اصطناعي تساعدك على تحويل الأفكار إلى نتائج.</p></div>
+<div><a class="brand" href="../index.html"><span class="brand-mark"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.2L21 10l-6.8 1.8L12 18l-2.2-6.2L3 10l6.8-1.8z"/></svg></span> حاتم AI</a><p style="color:#a5a0c9">أدوات ذكاء اصطناعي تساعدك على تحويل الأفكار إلى نتائج.</p></div>
 <div><h4>المنصة</h4><a href="../index.html">الرئيسية</a><a href="../tools.html">الأدوات</a><a href="../services.html">الخدمات</a><a href="../pricing.html">الأسعار</a></div>
 <div><h4>معلومات</h4><a href="../about.html">عن المنصة</a><a href="../contact.html">تواصل معنا</a><a href="../faq.html">الأسئلة الشائعة</a></div>
 <div><h4>قانوني</h4><a href="../privacy.html">سياسة الخصوصية</a><a href="../terms.html">الشروط والأحكام</a><a href="../login.html">تسجيل الدخول</a></div>
-</div><div class="container foot-bottom"><span>© 2026 Hatim AI. جميع الحقوق محفوظة.</span><span>هذا الموقع مشروع تجريبي لأغراض التدريب والعرض فقط.</span></div></footer>
+</div><div class="container foot-bottom"><span>© 2026 Hatim AI. جميع الحقوق محفوظة.</span><span>مشروع تجريبي لأغراض التدريب والعرض فقط.</span></div></footer>
 <div class="modal-back" id="payModal"><div class="modal"><h3 style="margin-top:0">هذه نسخة تجريبية</h3><p style="color:var(--muted)">نظام الدفع غير مفعّل في هذا المشروع.</p><button class="btn btn-primary" onclick="closeModal('payModal')">فهمت</button></div></div>
 <script src="../assets/js/app.js"></script></body></html>

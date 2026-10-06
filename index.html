@@ -1,103 +1,143 @@
 <!DOCTYPE html><html lang="ar" dir="rtl" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>حاتم AI | أدوات الذكاء الاصطناعي في مكان واحد</title>
 <meta name="description" content="حاتم AI منصة تجريبية تجمع أدوات الذكاء الاصطناعي للكتابة والصور وتلخيص المحتوى وتوليد الأفكار وتحسين النصوص في تجربة بسيطة وسهلة.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c3aed'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>H</text></svg>"></head>
 <body><a class="skip" href="#main">تخطي إلى المحتوى</a>
-<header class="header"><div class="container header-in">
-<a class="brand" href="index.html"><span class="brand-mark">✦</span> حاتم AI</a>
+<header class="header" id="siteHeader"><div class="container header-in">
+<a class="brand" href="index.html"><span class="brand-mark"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.2L21 10l-6.8 1.8L12 18l-2.2-6.2L3 10l6.8-1.8zM19 15l1.2 3.2L23.5 19l-3.3.8L19 23l-1.2-3.2-3.3-.8 3.3-.8z"/></svg></span> حاتم AI</a>
 <nav class="nav" id="mainNav" aria-label="التنقل الرئيسي">
 <a href="index.html">الرئيسية</a><a href="tools.html">الأدوات</a><a href="services.html">الخدمات</a><a href="pricing.html">الأسعار</a><a href="about.html">عن المنصة</a>
 </nav>
 <div class="header-actions">
-<button class="icon-btn" data-theme-btn title="تبديل المظهر">🌙</button>
+<button class="icon-btn" data-theme-btn title="تبديل المظهر" aria-label="تبديل المظهر"></button>
 <a class="btn btn-ghost btn-sm hide-m" href="login.html">دخول</a>
 <a class="btn btn-primary btn-sm" href="tools.html">ابدأ الآن</a>
-<button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="القائمة"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div></div></header>
 <main id="main">
-<section class="hero"><div class="container hero-grid">
-<div><span class="eyebrow">● نسخة تجريبية للعرض والتدريب</span>
-<h1>كل أدوات الذكاء الاصطناعي التي تحتاجها، في مكان واحد</h1>
-<p class="lead">حوّل أفكارك إلى نصوص وصور ومحتوى وأفكار جديدة باستخدام أدوات ذكية وسهلة الاستخدام.</p>
-<div class="hero-cta"><a class="btn btn-primary" href="tools.html">جرّب الأدوات الآن</a><a class="btn btn-ghost" href="services.html">استكشف الخدمات</a></div>
-<div class="trust"><span>✓ بدون تسجيل</span><span>✓ يعمل على الجوال</span><span>✓ نتائج فورية تجريبية</span></div></div>
-<div class="mock glow reveal"><div class="mock-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span style="margin-right:auto;color:var(--muted);font-size:.85rem">لوحة حاتم AI</span></div>
-<div class="mock-body"><div class="mock-input">مثال: اكتب منشورًا تسويقيًا لمطعم برجر جديد في جدة...</div>
-<div class="mock-row">
-<div class="mock-card"><span class="mock-icon">✎</span><b>توليد النص</b><span>منشورات وإعلانات</span></div>
-<div class="mock-card"><span class="mock-icon">◈</span><b>توليد الصور</b><span>صور تسويقية</span></div>
-<div class="mock-card"><span class="mock-icon">★</span><b>الأفكار</b><span>حملات ومشاريع</span></div>
-</div><div class="mock-row">
-<div class="mock-card"><b>تحسين النص</b><span>تصحيح وصياغة</span></div>
-<div class="mock-card"><b>تلخيص المحتوى</b><span>نقاط واضحة</span></div>
-<div class="mock-card"><b>البرومبتات</b><span>Prompt جاهز</span></div>
-</div></div></div>
+<!-- HERO -->
+<section class="hero"><div class="orb" style="width:420px;height:420px;background:#c4b5fd;top:-120px;left:-120px"></div><div class="orb" style="width:340px;height:340px;background:#bfdbfe;bottom:-140px;right:10%"></div>
+<div class="container hero-grid">
+<div><span class="eyebrow"><span class="pulse"></span> نسخة تجريبية للعرض والتدريب</span>
+<h1>كل أدوات <span class="grad">الذكاء الاصطناعي</span> التي تحتاجها، في مكان واحد</h1>
+<p class="lead">حوّل أفكارك إلى نصوص وصور ومحتوى جديد بأدوات ذكية وسهلة.</p>
+<div class="hero-cta"><a class="btn btn-primary" href="tools.html">جرّب الأدوات الآن</a><a class="btn btn-ghost" href="services.html">استكشف المنصة</a></div>
+<div class="hero-mini">
+<div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> بدون تسجيل</div>
+<div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> يعمل على الجوال</div>
+<div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> نتائج فورية تجريبية</div>
+</div></div>
+<div class="hero-visual">
+<div class="float-card fc-1"><span class="tag-ai">تم الإنشاء ✓</span> نص جديد جاهز</div>
+<div class="float-card fc-2"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#6d28d9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg> Prompt جاهز للنسخ</div>
+<div class="float-card fc-3">صورة جديدة <span class="typing"><i></i><i></i><i></i></span></div>
+<div class="dash-mock"><div class="dash-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dash-url">hatim.ai/dashboard</span></div>
+<div class="dash-body">
+<div class="dash-side"><a class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg> الرئيسية</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> الأدوات</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg> المفضلة</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M7 15l4-6 4 3 5-8"/></svg> الاستخدام</a></div>
+<div class="dash-main">
+<div class="ai-line"><span class="spark"><svg class="ic" style="width:15px;height:15px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.2L21 10l-6.8 1.8L12 18l-2.2-6.2L3 10l6.8-1.8z"/></svg></span> اكتب منشورًا تسويقيًا لمطعم برجر في جدة... <span class="typing"><i></i><i></i><i></i></span></div>
+<div class="mini-grid">
+<div class="mini"><span class="tag-ai">تم الإنشاء ✓</span><div class="sk fill" style="width:85%"></div><div class="sk"></div><div class="sk" style="width:60%"></div></div>
+<div class="mini"><div class="mini-img"></div><div class="sk" style="width:70%"></div></div>
+<div class="mini"><div class="sk fill" style="width:60%"></div><div class="sk"></div><div class="sk" style="width:75%"></div></div>
+<div class="mini"><span class="tag-ai">3 أفكار جديدة</span><div class="sk"></div><div class="sk" style="width:80%"></div></div>
+</div>
+</div>
+</div></div>
+</div>
 </div></section>
 
+<!-- TOOLS BENTO -->
 <section class="section"><div class="container">
-<div class="sec-head reveal"><h2>ماذا يمكنك أن تفعل مع حاتم AI؟</h2><p>مجموعة من الأدوات المصممة لتوفير الوقت وتحويل الأفكار إلى نتائج.</p></div>
-<div class="grid-3">
-<div class="card reveal"><div class="tool-icon">✎</div><h3>مولد النصوص</h3><p>اكتب فكرة واحصل على نص مناسب: منشورات، إعلانات، وصف منتجات، رسائل.</p><div class="go"><a class="btn btn-ghost btn-sm" href="tools/text.html">جرّب الأداة</a></div></div>
-<div class="card reveal"><div class="tool-icon">◈</div><h3>مولد الصور</h3><p>أنشئ صورًا تسويقية وإبداعية من وصف نصي بسيط.</p><div class="go"><a class="btn btn-ghost btn-sm" href="tools/image.html">جرّب الأداة</a></div></div>
-<div class="card reveal"><div class="tool-icon">✓</div><h3>تحسين النصوص</h3><p>تصحيح، إعادة صياغة، تبسيط، وجعل النص أكثر احترافية.</p><div class="go"><a class="btn btn-ghost btn-sm" href="tools/improve.html">جرّب الأداة</a></div></div>
-<div class="card reveal"><div class="tool-icon">≡</div><h3>تلخيص المحتوى</h3><p>حوّل النصوص الطويلة إلى ملخص واضح ونقاط رئيسية.</p><div class="go"><a class="btn btn-ghost btn-sm" href="tools/summarize.html">جرّب الأداة</a></div></div>
-<div class="card reveal"><div class="tool-icon">💡</div><h3>مساعد الأفكار</h3><p>ولّد أفكار مشاريع ومحتوى وحملات تسويقية جديدة.</p><div class="go"><a class="btn btn-ghost btn-sm" href="tools/ideas.html">جرّب الأداة</a></div></div>
-<div class="card reveal"><div class="tool-icon">⌁</div><h3>مولد البرومبتات</h3><p>أنشئ Prompt احترافيًا لاستخدامه مع أدوات الذكاء الاصطناعي.</p><div class="go"><a class="btn btn-ghost btn-sm" href="tools/prompt.html">جرّب الأداة</a></div></div>
-</div></div></section>
-
-<section class="section" style="background:var(--bg-soft)"><div class="container">
-<div class="sec-head"><h2>لماذا حاتم AI؟</h2></div>
-<div class="grid-4">
-<div class="card"><h3>بسيط</h3><p>واجهة سهلة حتى للمستخدم غير المتخصص.</p></div>
-<div class="card"><h3>سريع</h3><p>الوصول إلى كل الأدوات من مكان واحد.</p></div>
-<div class="card"><h3>متعدد الاستخدامات</h3><p>أدوات تناسب الدراسة والعمل وصناعة المحتوى.</p></div>
-<div class="card"><h3>تجربة ذكية</h3><p>واجهة مصممة لتجعل الذكاء الاصطناعي أسهل.</p></div>
-</div></div></section>
-
-<section class="section"><div class="container">
-<div class="sec-head"><h2>ابدأ خلال 3 خطوات</h2></div>
-<div class="steps">
-<div class="card step"><span class="step-num">1</span><h3>اختر الأداة</h3><p>اختر الخدمة التي تحتاج إليها من صفحة الأدوات.</p></div>
-<div class="card step"><span class="step-num">2</span><h3>أدخل ما تريد</h3><p>اكتب فكرتك أو النص أو الوصف ببساطة.</p></div>
-<div class="card step"><span class="step-num">3</span><h3>احصل على النتيجة</h3><p>احصل على نتيجة تجريبية وانسخها أو استخدمها.</p></div>
-</div></div></section>
-
-<section class="section" style="background:var(--bg-soft)"><div class="container">
-<div class="sec-head"><h2>ماذا يمكنك أن تنجز؟</h2></div>
-<div class="grid-4">
-<div class="card"><h3>للطلاب</h3><p>تلخيص الدروس، توليد الأفكار، تحسين الكتابة.</p></div>
-<div class="card"><h3>للمسوقين</h3><p>أفكار حملات، منشورات، نصوص إعلانية، وصف المنتجات.</p></div>
-<div class="card"><h3>لصناع المحتوى</h3><p>أفكار فيديو، عناوين، Scripts، Captions.</p></div>
-<div class="card"><h3>لأصحاب المشاريع</h3><p>أفكار مشاريع، خطط أولية، كتابة المحتوى.</p></div>
-</div></div></section>
-
-<section class="section"><div class="container">
-<div class="sec-head"><h2>خطط بسيطة للجميع</h2><p>للتجربة فقط — الدفع غير مفعّل في هذه النسخة.</p></div>
-<div class="pricing">
-<div class="card"><h3>مجاني</h3><div class="price">0 <small>ريال</small></div><ul class="check"><li>استخدام محدود</li><li>أدوات أساسية</li><li>تجربة المنصة</li></ul><div class="go"><button class="btn btn-ghost" data-pricing-demo>ابدأ مجانًا</button></div></div>
-<div class="card price-featured"><span class="badge badge-pop">الأكثر شعبية</span><h3>Pro</h3><div class="price">29 <small>ريال / شهريًا</small></div><ul class="check"><li>أدوات أكثر</li><li>استخدام أكبر</li><li>ميزات متقدمة</li></ul><div class="go"><button class="btn btn-primary" data-pricing-demo>ابدأ الآن</button></div></div>
-<div class="card"><h3>Business</h3><div class="price">79 <small>ريال / شهريًا</small></div><ul class="check"><li>جميع الأدوات</li><li>أولوية في الاستخدام</li><li>مناسب للفرق الصغيرة</li></ul><div class="go"><button class="btn btn-ghost" data-pricing-demo>اختر الخطة</button></div></div>
+<div class="sec-head center reveal"><span class="sec-tag">الأدوات</span><h2>أدواتك في مكان واحد</h2><p>اختر الأداة وابدأ التجربة فورًا — بدون تسجيل.</p></div>
+<div class="bento">
+<div class="tile tile-lg reveal"><div class="tile-visual t-image"><div class="dots-bg"></div><span class="icon-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="m5 19 5.5-5.5 3 3L19 11l2 2"/></svg></span><div class="tile-preview"><div class="demo-imgs" style="margin:0;grid-template-columns:repeat(3,1fr)"><div class="demo-img" style="min-height:88px"><img loading="lazy" alt="مثال صورة مولدة" src="https://picsum.photos/seed/hatimg1/300/220"></div><div class="demo-img" style="min-height:88px"><img loading="lazy" alt="مثال صورة مولدة" src="https://picsum.photos/seed/hatimg2/300/220"></div><div class="demo-img" style="min-height:88px"><img loading="lazy" alt="مثال صورة مولدة" src="https://picsum.photos/seed/hatimg3/300/220"></div></div></div></div>
+<div class="tile-body"><h3>مولد الصور</h3><p>صور تسويقية وإبداعية من وصف نصي.</p><div class="tile-foot"><a class="btn btn-primary btn-sm" href="tools/image.html">جرّب الأداة</a><span class="badge badge-demo">تجريبي</span></div></div></div>
+<div class="tile reveal"><div class="tile-visual t-text"><div class="dots-bg"></div><span class="icon-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span><div class="tile-preview">"اكتب إعلانًا..."<div class="pl"></div><div class="pl short"></div></div></div>
+<div class="tile-body"><h3>مولد النصوص</h3><p>منشورات وإعلانات ووصف منتجات.</p><div class="tile-foot"><a class="btn btn-ghost btn-sm" href="tools/text.html">جرّب الأداة</a></div></div></div>
+<div class="tile reveal"><div class="tile-visual t-sum"><div class="dots-bg"></div><span class="icon-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span><div class="tile-preview"><div class="before-after"><span>مقال طويل</span><span class="arr">←</span><span><b>3 نقاط</b></span></div></div></div>
+<div class="tile-body"><h3>تلخيص المحتوى</h3><p>نصوص طويلة تتحول لنقاط واضحة.</p><div class="tile-foot"><a class="btn btn-ghost btn-sm" href="tools/summarize.html">جرّب الأداة</a></div></div></div>
+<div class="tile reveal"><div class="tile-visual t-idea"><div class="dots-bg"></div><span class="icon-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.7 1 1.5 1 2.5h6c0-1 .2-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg></span><div class="tile-preview"><b>3 أفكار جديدة</b><div class="pl"></div><div class="pl short"></div></div></div>
+<div class="tile-body"><h3>مساعد الأفكار</h3><p>أفكار مشاريع ومحتوى وحملات.</p><div class="tile-foot"><a class="btn btn-ghost btn-sm" href="tools/ideas.html">جرّب الأداة</a></div></div></div>
+<div class="tile reveal"><div class="tile-visual t-prompt"><div class="dots-bg"></div><span class="icon-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m7 9 3 3-3 3M12 15h5"/></svg></span><div class="tile-preview"><div class="code-box">role: marketer<br>tone: creative<br>lang: ar</div></div></div>
+<div class="tile-body"><h3>مولد البرومبتات</h3><p>Prompt احترافي جاهز للنسخ.</p><div class="tile-foot"><a class="btn btn-ghost btn-sm" href="tools/prompt.html">جرّب الأداة</a></div></div></div>
+<div class="tile reveal"><div class="tile-visual t-improve"><div class="dots-bg"></div><span class="icon-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z"/></svg></span><div class="tile-preview"><div class="before-after"><span style="text-decoration:line-through;color:var(--muted)">قبل</span><span class="arr">←</span><span><b>بعد ✓</b></span></div></div></div>
+<div class="tile-body"><h3>تحسين النصوص</h3><p>تصحيح وصياغة بأسلوب احترافي.</p><div class="tile-foot"><a class="btn btn-ghost btn-sm" href="tools/improve.html">جرّب الأداة</a></div></div></div>
 </div>
-<p style="text-align:center;margin-top:18px"><a class="btn btn-ghost btn-sm" href="pricing.html">عرض صفحة الأسعار</a></p></div></section>
+<p style="text-align:center;margin-top:22px"><a class="btn btn-ghost" href="tools.html">عرض كل الأدوات</a></p></div></section>
 
-<section class="section" style="background:var(--bg-soft)"><div class="container">
-<div class="sec-head"><h2>أسئلة شائعة</h2></div>
-<div class="faq-item"><button class="faq-q">هل حاتم AI خدمة حقيقية؟ <span>+</span></button><div class="faq-a">هذا الإصدار تجريبي ومخصص للعرض والتدريب فقط.</div></div>
-<div class="faq-item"><button class="faq-q">هل النتائج حقيقية؟ <span>+</span></button><div class="faq-a">الأدوات تستخدم نتائج تجريبية Mock Data لأغراض العرض.</div></div>
-<div class="faq-item"><button class="faq-q">هل يعمل على الهاتف؟ <span>+</span></button><div class="faq-a">نعم، الموقع متجاوب بالكامل مع الجوال والتابلت.</div></div>
-<p><a class="btn btn-ghost btn-sm" href="faq.html">كل الأسئلة</a></p></div></section>
+<!-- GALLERY -->
+<section class="section bg-soft"><div class="container">
+<div class="sec-head center reveal"><span class="sec-tag">المعرض</span><h2>شاهد ما يمكنك إنشاؤه</h2><p>أمثلة تجريبية لمخرجات صور المنصة.</p></div>
+<div class="g-grid">
+<div class="g-item wide reveal"><img loading="lazy" alt="تصوير منتج تجريبي" src="https://picsum.photos/seed/hatimp1/800/450"><div class="g-ov"><span>جرّب الآن</span></div></div>
+<div class="g-item reveal"><img loading="lazy" alt="صورة طعام تجريبية" src="https://picsum.photos/seed/hatimf1/500/450"><div class="g-ov"><span>إنشاء صورة</span></div></div>
+<div class="g-item reveal"><img loading="lazy" alt="ملصق تسويقي تجريبي" src="https://picsum.photos/seed/hatimpost/500/450"><div class="g-ov"><span>جرّب الآن</span></div></div>
+<div class="g-item reveal"><img loading="lazy" alt="مشهد سينمائي تجريبي" src="https://picsum.photos/seed/hatimcine/500/450"><div class="g-ov"><span>إنشاء صورة</span></div></div>
+<div class="g-item wide reveal"><img loading="lazy" alt="تصميم إبداعي تجريبي" src="https://picsum.photos/seed/hatimart/800/450"><div class="g-ov"><span>جرّب الآن</span></div></div>
+</div>
+<p style="text-align:center;margin-top:20px"><a class="btn btn-primary" href="tools/image.html">أنشئ صورتك التجريبية</a></p></div></section>
 
-<section class="section"><div class="container card" style="text-align:center;padding:48px 24px;background:var(--accent-grad);color:#fff;border:none">
-<h2 style="margin:0 0 8px">جاهز لتجربة الذكاء الاصطناعي بطريقة أبسط؟</h2>
-<p style="opacity:.9;margin:0 0 20px">اختر أداة وابدأ تجربتك الآن.</p>
-<a class="btn" style="background:#fff;color:#4f46e5" href="tools.html">ابدأ التجربة</a></div></section>
+<!-- QUICK DEMO -->
+<section class="section"><div class="container">
+<div class="sec-head center reveal"><span class="sec-tag">تجربة فورية</span><h2>جرّب حاتم AI الآن</h2><p>اختر أداة وشاهد نتيجة تجريبية مباشرة.</p></div>
+<div class="demo-tabs reveal" role="tablist">
+<button class="chip active" data-qd="text" onclick="qdShow('text')">كتابة</button>
+<button class="chip" data-qd="image" onclick="qdShow('image')">صور</button>
+<button class="chip" data-qd="ideas" onclick="qdShow('ideas')">أفكار</button>
+<button class="chip" data-qd="sum" onclick="qdShow('sum')">تلخيص</button>
+</div>
+<div class="demo-box reveal" id="qdBox"></div></div></section>
+
+<!-- JOURNEY -->
+<section class="section bg-tint"><div class="container">
+<div class="sec-head center reveal"><span class="sec-tag">كيف يعمل</span><h2>من الفكرة إلى النتيجة</h2><p>أربع خطوات مرئية — بدون تعقيد.</p></div>
+<div class="journey">
+<div class="j-step reveal"><span class="j-num">01</span><div class="j-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><b>اختر الأداة</b><small style="color:var(--muted)">6 أدوات في لوحة واحدة</small></div></div>
+<div class="j-step reveal"><span class="j-num">02</span><div class="j-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg><b>اكتب طلبك</b><small style="color:var(--muted)">فكرة أو نص أو وصف</small></div></div>
+<div class="j-step reveal"><span class="j-num">03</span><div class="j-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg><b>المعالجة</b><div class="j-prog"><i></i></div></div></div>
+<div class="j-step reveal"><span class="j-num">04</span><div class="j-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>النتيجة</b><span class="tag-ai">تم الإنشاء ✓</span></div></div>
+</div></div></section>
+
+<!-- BENEFITS -->
+<section class="section"><div class="container">
+<div class="sec-head reveal"><span class="sec-tag">لماذا حاتم AI</span><h2>مصمم ليكون بسيطًا وسريعًا</h2></div>
+<div class="grid-2" style="grid-template-columns:repeat(4,1fr)" id="whyGrid">
+<div class="card reveal"><span class="icon-xl t-text" style="width:50px;height:50px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></span><h3>بسيط</h3><p>واجهة سهلة حتى لغير المتخصصين.</p></div>
+<div class="card reveal"><span class="icon-xl t-sum" style="width:50px;height:50px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span><h3>سريع</h3><p>كل الأدوات في مكان واحد.</p></div>
+<div class="card reveal"><span class="icon-xl t-image" style="width:50px;height:50px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><h3>متعدد الاستخدامات</h3><p>للدراسة والعمل وصناعة المحتوى.</p></div>
+<div class="card reveal"><span class="icon-xl t-idea" style="width:50px;height:50px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg></span><h3>تجربة ذكية</h3><p>تجعل الذكاء الاصطناعي أسهل.</p></div>
+</div></div></section>
+
+<!-- PRICING -->
+<section class="section bg-soft"><div class="container">
+<div class="sec-head center reveal"><span class="sec-tag">الأسعار</span><h2>خطط بسيطة للجميع</h2><p>للتجربة فقط — الدفع غير مفعّل.</p></div>
+<div class="pricing">
+<div class="card reveal"><div class="plan-head"><span class="plan-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></span><h3>مجاني</h3></div><div class="price">0 <small>ريال</small></div><ul class="check"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>استخدام محدود</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>أدوات أساسية</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>تجربة المنصة</li></ul><div style="margin-top:14px"><button class="btn btn-ghost" data-pricing-demo>ابدأ مجانًا</button></div></div>
+<div class="card price-featured reveal" style="border:2px solid var(--primary)"><span class="badge badge-pop">الأكثر شعبية</span><div class="plan-head"><span class="plan-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg></span><h3>Pro</h3></div><div class="price">29 <small>ريال / شهريًا</small></div><ul class="check"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>أدوات أكثر</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>استخدام أكبر</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>ميزات متقدمة</li></ul><div style="margin-top:14px"><button class="btn btn-primary" data-pricing-demo>ابدأ الآن</button></div></div>
+<div class="card reveal"><div class="plan-head"><span class="plan-ic"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span><h3>Business</h3></div><div class="price">79 <small>ريال / شهريًا</small></div><ul class="check"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>جميع الأدوات</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>أولوية في الاستخدام</li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>مناسب للفرق الصغيرة</li></ul><div style="margin-top:14px"><button class="btn btn-ghost" data-pricing-demo>اختر الخطة</button></div></div>
+</div></div></section>
+
+<!-- FAQ -->
+<section class="section"><div class="container" style="max-width:760px">
+<div class="sec-head center reveal"><span class="sec-tag">الأسئلة الشائعة</span><h2>عندك سؤال؟</h2></div>
+<div class="faq-item reveal"><button class="faq-q"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.3c-.8.3-.9 1-.9 1.7M12 17h.01"/></svg> هل حاتم AI خدمة حقيقية؟ <svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">هذا الإصدار تجريبي ومخصص للعرض والتدريب فقط.</div></div>
+<div class="faq-item reveal"><button class="faq-q"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.3c-.8.3-.9 1-.9 1.7M12 17h.01"/></svg> هل النتائج حقيقية؟ <svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">الأدوات تستخدم نتائج تجريبية Mock Data لأغراض العرض.</div></div>
+<div class="faq-item reveal"><button class="faq-q"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.4 2.3c-.8.3-.9 1-.9 1.7M12 17h.01"/></svg> هل يعمل على الهاتف؟ <svg class="ic chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="faq-a">نعم، الموقع متجاوب بالكامل مع الجوال والتابلت.</div></div>
+<p style="text-align:center"><a class="btn btn-ghost btn-sm" href="faq.html">كل الأسئلة</a></p></div></section>
+
+<!-- CTA -->
+<section class="section"><div class="container"><div class="cta-dark reveal">
+<div style="position:relative;z-index:1"><h2 style="margin:0 0 8px;font-size:clamp(1.6rem,3.4vw,2.3rem)">فكرتك القادمة تبدأ هنا</h2>
+<p style="opacity:.8;margin:0 0 24px">اختر أداة وابدأ تجربتك الآن — بدون تسجيل.</p>
+<a class="btn btn-primary" style="font-size:1.05rem;padding:14px 36px" href="tools.html">ابدأ تجربتك</a></div></div></div></section>
 </main>
 <footer><div class="container foot-grid">
-<div><a class="brand" href="index.html"><span class="brand-mark">✦</span> حاتم AI</a><p style="color:var(--muted)">أدوات ذكاء اصطناعي تساعدك على تحويل الأفكار إلى نتائج.</p></div>
+<div><a class="brand" href="index.html"><span class="brand-mark"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6.2L21 10l-6.8 1.8L12 18l-2.2-6.2L3 10l6.8-1.8z"/></svg></span> حاتم AI</a><p style="color:#a5a0c9">أدوات ذكاء اصطناعي تساعدك على تحويل الأفكار إلى نتائج.</p></div>
 <div><h4>المنصة</h4><a href="index.html">الرئيسية</a><a href="tools.html">الأدوات</a><a href="services.html">الخدمات</a><a href="pricing.html">الأسعار</a></div>
 <div><h4>معلومات</h4><a href="about.html">عن المنصة</a><a href="contact.html">تواصل معنا</a><a href="faq.html">الأسئلة الشائعة</a></div>
 <div><h4>قانوني</h4><a href="privacy.html">سياسة الخصوصية</a><a href="terms.html">الشروط والأحكام</a><a href="login.html">تسجيل الدخول</a></div>
-</div><div class="container foot-bottom"><span>© 2026 Hatim AI. جميع الحقوق محفوظة.</span><span>هذا الموقع مشروع تجريبي لأغراض التدريب والعرض فقط.</span></div></footer>
+</div><div class="container foot-bottom"><span>© 2026 Hatim AI. جميع الحقوق محفوظة.</span><span>مشروع تجريبي لأغراض التدريب والعرض فقط.</span></div></footer>
 <div class="modal-back" id="payModal"><div class="modal"><h3 style="margin-top:0">هذه نسخة تجريبية</h3><p style="color:var(--muted)">نظام الدفع غير مفعّل في هذا المشروع.</p><button class="btn btn-primary" onclick="closeModal('payModal')">فهمت</button></div></div>
 <script src="assets/js/app.js"></script></body></html>
