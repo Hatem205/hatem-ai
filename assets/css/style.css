@@ -292,6 +292,18 @@ footer .brand{color:#fff}
   .welcome{grid-template-columns:1fr}
   .cta-dark{padding:48px 20px}
 }
+/* icon-xl used standalone (not inside .tile-visual) — fixes invisible white icons in light mode */
+.icon-xl.t-text{background:var(--g-text)}
+.icon-xl.t-image{background:var(--g-image)}
+.icon-xl.t-improve{background:var(--g-improve)}
+.icon-xl.t-sum{background:var(--g-sum)}
+.icon-xl.t-idea{background:var(--g-idea)}
+.icon-xl.t-prompt{background:var(--g-prompt)}
+/* LTR layout tweaks */
+html[dir="ltr"] .faq-q{text-align:left}
+html[dir="ltr"] .faq-q .chev{margin-right:0;margin-left:auto}
+html[dir="ltr"] .before-after .arr{transform:scaleX(-1)}
+.lang-btn{width:auto;padding:0 14px;font-weight:800;font-size:.88rem}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
   .reveal{opacity:1;transform:none}

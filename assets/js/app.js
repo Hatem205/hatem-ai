@@ -4,6 +4,81 @@ const store={get:(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse
 const SVG_MOON='<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
 const SVG_SUN='<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>';
 
+// ---------- AR/EN language toggle (frontend demo, no backend) ----------
+const I18N={
+'الرئيسية':'Home','الأدوات':'Tools','الخدمات':'Services','الأسعار':'Pricing','عن المنصة':'About','دخول':'Sign in','ابدأ الآن':'Start now',
+'جرّب الأدوات الآن':'Try the tools now','استكشف المنصة':'Explore the platform','استكشف الخدمات':'Explore services',
+'نسخة تجريبية للعرض والتدريب':'Demo version for showcase and training',
+'كل أدوات':'All','الذكاء الاصطناعي':'AI','التي تحتاجها، في مكان واحد':'tools you need, in one place',
+'حوّل أفكارك إلى نصوص وصور ومحتوى جديد بأدوات ذكية وسهلة.':'Turn your ideas into texts, images and new content with smart, easy tools.',
+'بدون تسجيل':'No sign-up','يعمل على الجوال':'Mobile friendly','نتائج فورية تجريبية':'Instant demo results',
+'المفضلة':'Favorites','الاستخدام':'Usage','اكتب منشورًا تسويقيًا لمطعم برجر في جدة...':'Write a marketing post for a burger restaurant in Jeddah...',
+'تم الإنشاء':'Created','نص جديد جاهز':'New text ready','جاهز للنسخ':'ready to copy','صورة جديدة':'New image','3 أفكار جديدة':'3 new ideas',
+'أدواتك في مكان واحد':'All your tools in one place','اختر الأداة وابدأ التجربة فورًا — بدون تسجيل.':'Pick a tool and start instantly — no sign-up.',
+'مولد الصور':'Image generator','صور تسويقية وإبداعية من وصف نصي.':'Marketing and creative images from a text description.',
+'جرّب الأداة':'Try the tool','تجريبي':'Demo','مولد النصوص':'Text generator','منشورات وإعلانات ووصف منتجات.':'Posts, ads and product descriptions.',
+'تلخيص المحتوى':'Content summarizer','نصوص طويلة تتحول لنقاط واضحة.':'Long texts turned into clear points.',
+'مساعد الأفكار':'Idea assistant','أفكار مشاريع ومحتوى وحملات.':'Project, content and campaign ideas.',
+'مولد البرومبتات':'Prompt generator','احترافي جاهز للنسخ.':'professional, ready to copy.','تحسين النصوص':'Text improver','تصحيح وصياغة بأسلوب احترافي.':'Proofreading and rephrasing, professionally.',
+'عرض كل الأدوات':'View all tools','المعرض':'Gallery','شاهد ما يمكنك إنشاؤه':'See what you can create',
+'أمثلة تجريبية لمخرجات صور المنصة.':'Demo examples of the platform image outputs.',
+'جرّب الآن':'Try now','إنشاء صورة':'Generate image','أنشئ صورتك التجريبية':'Create your demo image',
+'تجربة فورية':'Instant try','جرّب حاتم AI الآن':'Try Hatim AI now','اختر أداة وشاهد نتيجة تجريبية مباشرة.':'Pick a tool and see an instant demo result.',
+'كتابة':'Writing','صور':'Images','أفكار':'Ideas','تلخيص':'Summarize','النتيجة التجريبية':'Demo result',
+'كيف يعمل':'How it works','من الفكرة إلى النتيجة':'From idea to result','أربع خطوات مرئية — بدون تعقيد.':'Four visual steps — no complexity.',
+'اختر الأداة':'Choose the tool','6 أدوات في لوحة واحدة':'6 tools in one dashboard','اكتب طلبك':'Write your request',
+'فكرة أو نص أو وصف':'An idea, text or description','المعالجة':'Processing','النتيجة':'Result',
+'لماذا حاتم AI':'Why Hatim AI','مصمم ليكون بسيطًا وسريعًا':'Designed to be simple and fast','بسيط':'Simple',
+'واجهة سهلة حتى لغير المتخصصين.':'Easy interface even for non-experts.','سريع':'Fast','كل الأدوات في مكان واحد.':'All tools in one place.',
+'متعدد الاستخدامات':'Versatile','للدراسة والعمل وصناعة المحتوى.':'For study, work and content creation.','تجربة ذكية':'Smart experience','تجعل الذكاء الاصطناعي أسهل.':'Makes AI easier.',
+'خطط بسيطة للجميع':'Simple plans for everyone','للتجربة فقط — الدفع غير مفعّل.':'Demo only — payments are disabled.',
+'مجاني':'Free','ريال / شهريًا':'SAR /mo','ريال':'SAR','استخدام محدود':'Limited usage','أدوات أساسية':'Core tools','تجربة المنصة':'Platform trial',
+'ابدأ مجانًا':'Start free','الأكثر شعبية':'Most popular','أدوات أكثر':'More tools','استخدام أكبر':'Higher usage','ميزات متقدمة':'Advanced features',
+'جميع الأدوات':'All tools','أولوية في الاستخدام':'Priority usage','مناسب للفرق الصغيرة':'For small teams','اختر الخطة':'Choose plan',
+'الأسئلة الشائعة':'FAQ','عندك سؤال؟':'Have a question?','هل حاتم AI خدمة حقيقية؟':'Is Hatim AI a real service?',
+'هذا الإصدار تجريبي ومخصص للعرض والتدريب فقط.':'This version is a demo for showcase and training only.',
+'هل النتائج حقيقية؟':'Are the results real?','الأدوات تستخدم نتائج تجريبية Mock Data لأغراض العرض.':'Tools use mock demo data for showcase.',
+'هل يعمل على الهاتف؟':'Does it work on mobile?','نعم، الموقع متجاوب بالكامل مع الجوال والتابلت.':'Yes, fully responsive on mobile and tablet.',
+'كل الأسئلة':'All questions','فكرتك القادمة تبدأ هنا':'Your next idea starts here',
+'اختر أداة وابدأ تجربتك الآن — بدون تسجيل.':'Pick a tool and start now — no sign-up.','ابدأ تجربتك':'Start your trial',
+'هذه نسخة تجريبية':'This is a demo version','نظام الدفع غير مفعّل في هذا المشروع.':'Payments are disabled in this project.','فهمت':'Got it',
+'المنصة':'Platform','معلومات':'Info','قانوني':'Legal','تواصل معنا':'Contact us','سياسة الخصوصية':'Privacy policy','الشروط والأحكام':'Terms and conditions',
+'تسجيل الدخول':'Sign in','جميع الحقوق محفوظة.':'All rights reserved.','مشروع تجريبي لأغراض التدريب والعرض فقط.':'Demo project for training and showcase only.',
+'أدوات الذكاء الاصطناعي':'AI tools','ابحث عن أداة...':'Search for a tool...','الكل':'All','تسويق':'Marketing','دراسة':'Study','إنتاجية':'Productivity',
+'لا توجد نتائج مطابقة.':'No matching results.','خدمات حاتم AI':'Hatim AI services','الفائدة':'Benefit',
+'مولد النصوص بالذكاء الاصطناعي':'AI text generator','اكتب ما تحتاجه وسننشئ لك نصًا مناسبًا.':'Write what you need and we will create a suitable text.',
+'مثال: اكتب منشورًا تسويقيًا لمطعم برجر جديد في جدة...':'Example: write a marketing post for a new burger restaurant in Jeddah...',
+'نوع المحتوى':'Content type','منشور سوشيال ميديا':'Social media post','إعلان':'Ad','مقال':'Article','وصف منتج':'Product description',
+'بريد إلكتروني':'Email','فكرة محتوى':'Content idea','النبرة':'Tone','احترافية':'Professional','ودية':'Friendly','إبداعية':'Creative','مختصرة':'Concise',
+'طول النص':'Text length','قصير':'Short','متوسط':'Medium','طويل':'Long','توليد النص':'Generate text','نسخ':'Copy','إعادة التوليد':'Regenerate','مسح':'Clear',
+'مولد الصور بالذكاء الاصطناعي':'AI image generator','صف الصورة التي تريد إنشاءها...':'Describe the image you want to create...',
+'نسبة الصورة':'Aspect ratio','مربع 1:1':'Square 1:1','أفقي 16:9':'Landscape 16:9','عمودي 9:16':'Portrait 9:16',
+'الأسلوب':'Style','واقعي':'Realistic','سينمائي':'Cinematic','تحسين النص':'Improve text','النص الأصلي':'Original text','النص المحسّن':'Improved text',
+'تحسين':'Improve','اختصار':'Shorten','إعادة صياغة':'Rephrase','تصحيح الأخطاء':'Fix errors',
+'تلخيص النصوص':'Text summarizer','ملخص قصير':'Short summary','ملخص متوسط':'Medium summary','نقاط رئيسية':'Key points',
+'ما الموضوع الذي تريد أفكارًا حوله؟':'What topic do you want ideas about?','توليد الأفكار':'Generate ideas',
+'ما الذي تريد القيام به؟':'What do you want to do?','لمن؟':'For whom?','طالب':'Student','مسوق':'Marketer','صاحب مشروع':'Business owner',
+'صانع محتوى':'Content creator','مبرمج':'Developer','اللغة':'Language','العربية':'Arabic','الإنجليزية':'English',
+'إنشاء Prompt':'Create prompt','نسخ Prompt':'Copy prompt','مرحبًا بك في حاتم AI':'Welcome to Hatim AI','أنشئ الآن':'Create now',
+'الأدوات المستخدمة':'Tools used','النصوص المنشأة':'Texts created','الصور التجريبية':'Demo images','الرصيد التجريبي':'Demo credit',
+'استخدام الأسبوع':'Week usage','أدواتك الأخيرة':'Your recent tools','فتح':'Open','استُخدمت مؤخرًا':'Used recently',
+'لا توجد عناصر مفضلة بعد.':'No favorites yet.','الإعدادات':'Settings','الحساب':'Account','الإشعارات':'Notifications','المظهر':'Appearance',
+'مرحبًا بعودتك':'Welcome back','البريد الإلكتروني':'Email','كلمة المرور':'Password','إنشاء حساب':'Create account',
+'الاسم':'Name','الرسالة':'Message','إرسال':'Send','تم استلام رسالتك (تجريبي)':'Message received (demo)',
+'أدخل طلبك للبدء.':'Enter your request to start.','جاري إنشاء النتيجة':'Generating result','تم إنشاء النتيجة التجريبية':'Demo result created',
+'تم نسخ النص بنجاح':'Text copied successfully','تم إنشاء الملخص':'Summary created','تم توليد الأفكار':'Ideas generated',
+'تم إنشاء الصور التجريبية':'Demo images created','تم حفظ الإعداد':'Setting saved','تم تحديث المفضلة':'Favorites updated',
+'تم تفعيل الوضع الداكن':'Dark mode on','تم تفعيل الوضع الفاتح':'Light mode on','عن حاتم AI':'About Hatim AI','القائمة':'Menu','تبديل المظهر':'Toggle theme',
+'تغيير اللغة':'Change language','كل الأدوات':'All tools','العودة للرئيسية':'Back home','الصفحة غير موجودة':'Page not found',
+'الصفحة المطلوبة غير موجودة أو نُقلت إلى مكان آخر.':'The requested page was not found or moved.'};
+function initLang(){injectLangBtn();applyLang()}
+function injectLangBtn(){$$('.header-actions').forEach(h=>{if(h.querySelector('[data-lang-btn]'))return;const b=document.createElement('button');b.className='icon-btn lang-btn';b.setAttribute('data-lang-btn','');b.setAttribute('aria-label','Language / اللغة');b.textContent=store.get('hatim-lang','ar')==='en'?'عربي':'EN';b.addEventListener('click',()=>{store.set('hatim-lang',store.get('hatim-lang','ar')==='en'?'ar':'en');location.reload()});h.insertBefore(b,h.firstChild)})}
+function applyLang(){const en=store.get('hatim-lang','ar')==='en';document.documentElement.lang=en?'en':'ar';document.documentElement.dir=en?'ltr':'rtl';if(!en)return;document.title=repStr(document.title);
+const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:n=>{if(!n.nodeValue.trim())return NodeFilter.FILTER_REJECT;const p=n.parentElement;if(p&&p.closest('script,style,.code-box'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});
+const ns=[];while(w.nextNode())ns.push(w.currentNode);ns.forEach(n=>{n.nodeValue=repStr(n.nodeValue)});
+$$('[placeholder]').forEach(el=>el.setAttribute('placeholder',repStr(el.getAttribute('placeholder'))));
+$$('option').forEach(o=>{o.textContent=repStr(o.textContent)})}
+function repStr(s){if(!s)return s;let v=s;const ents=Object.entries(I18N).sort((a,b)=>b[0].length-a[0].length);for(const[ar,e]of ents){if(v.includes(ar))v=v.split(ar).join(e)}return v}
 // Theme
 function initTheme(){const t=store.get('hatim-theme','light');document.documentElement.setAttribute('data-theme',t);syncThemeBtn()}
 function toggleTheme(){const cur=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',cur);store.set('hatim-theme',cur);syncThemeBtn();const sw=$('#swDark');if(sw)sw.setAttribute('aria-checked',cur==='dark');toast(cur==='dark'?'تم تفعيل الوضع الداكن':'تم تفعيل الوضع الفاتح')}
@@ -20,6 +95,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')$$('.modal-back.open
 
 document.addEventListener('DOMContentLoaded',()=>{
   initTheme();
+  initLang();
   $$('[data-theme-btn]').forEach(b=>b.addEventListener('click',toggleTheme));
   const menuBtn=$('#menuBtn'),nav=$('#mainNav');
   menuBtn?.addEventListener('click',()=>nav.classList.toggle('open'));
